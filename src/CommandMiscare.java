@@ -1,4 +1,3 @@
-// Import the Crate class if it's in a different package
 
 public class CommandMiscare {
     private Jucator jucator;
