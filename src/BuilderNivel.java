@@ -6,9 +6,13 @@ public class BuilderNivel {
             for (int j = 0; j < randuri[i].length(); j++) {
                 EntitateJoc element = FactoryEntitateJoc.creazaEntitate(randuri[i].charAt(j), j, i);
                 if (element instanceof Jucator) {
-                    nivel.setPozitieJucator(j, i); // Set player position
+                    nivel.setPozitieJucator(j, i);
                 }
-                nivel.setElement(j, i, element); // Set the element in the grid
+                if (element instanceof Obiectiv) {
+                    nivel.getListaObiectiveX().add(j);
+                    nivel.getListaObiectiveY().add(i);
+                }
+                nivel.setElement(j, i, element);
             }
         }
         return nivel;

@@ -1,5 +1,4 @@
 import javax.swing.*;
-import java.awt.Color;
 import java.awt.Graphics;
 
 public class Cutie extends EntitateJoc {
@@ -15,7 +14,7 @@ public class Cutie extends EntitateJoc {
 
     @Override
     public void grafica(Graphics g) {
-        sprite.paintIcon(null, g, x * 64, y * 64); // Draw the player sprite
+        sprite.paintIcon(null, g, x * 64, y * 64);
     }
 
     // Getters and setters
@@ -27,7 +26,7 @@ public class Cutie extends EntitateJoc {
         return y;
     }
 
-    public void setPosition(int x, int y) {
+    public void setPozitie(int x, int y) {
         this.x = x;
         this.y = y;
     }}

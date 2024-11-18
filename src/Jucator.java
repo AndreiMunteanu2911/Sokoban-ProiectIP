@@ -30,17 +30,39 @@ public class Jucator extends EntitateJoc {
     public boolean getEstePeObiectiv(){
         return estePeObiectiv;
     }
-    public void setEstePeObiectiv(boolean val){
+    public void setEstePeObiectiv(boolean val, int deltaX, int deltaY){
         this.estePeObiectiv=val;
-        if (this.estePeObiectiv==false){
-            this.sprite = new ImageIcon("D:\\ANDREI\\cursuri\\ANUL III UGAL\\IP\\Joc Sokoban\\grafica\\jucator1.png");
+        if (!this.estePeObiectiv){
+            if (deltaX == 1 && deltaY == 0) {
+                this.setSprite("D:\\ANDREI\\cursuri\\ANUL III UGAL\\IP\\Joc Sokoban\\grafica\\jucator3.png");
+            }
+            if (deltaX == -1 && deltaY == 0) {
+                this.setSprite("D:\\ANDREI\\cursuri\\ANUL III UGAL\\IP\\Joc Sokoban\\grafica\\jucator4.png");
+            }
+            if (deltaX == 0 && deltaY == 1) {
+                this.setSprite("D:\\ANDREI\\cursuri\\ANUL III UGAL\\IP\\Joc Sokoban\\grafica\\jucator1.png");
+            }
+            if (deltaX == 0 && deltaY == -1) {
+                this.setSprite("D:\\ANDREI\\cursuri\\ANUL III UGAL\\IP\\Joc Sokoban\\grafica\\jucator2.png");
+            }
         }
         else{
-            this.sprite = new ImageIcon("D:\\ANDREI\\cursuri\\ANUL III UGAL\\IP\\Joc Sokoban\\grafica\\jucator1+obiectiv.png");
+            if (deltaX == 1 && deltaY == 0) {
+                this.setSprite("D:\\ANDREI\\cursuri\\ANUL III UGAL\\IP\\Joc Sokoban\\grafica\\obiectiv+jucator3.png");
+            }
+            if (deltaX == -1 && deltaY == 0) {
+                this.setSprite("D:\\ANDREI\\cursuri\\ANUL III UGAL\\IP\\Joc Sokoban\\grafica\\obiectiv+jucator4.png");
+            }
+            if (deltaX == 0 && deltaY == 1) {
+                this.setSprite("D:\\ANDREI\\cursuri\\ANUL III UGAL\\IP\\Joc Sokoban\\grafica\\obiectiv+jucator1.png");
+            }
+            if (deltaX == 0 && deltaY == -1) {
+                this.setSprite("D:\\ANDREI\\cursuri\\ANUL III UGAL\\IP\\Joc Sokoban\\grafica\\obiectiv+jucator2.png");
+            }
         }
     }
 
-    public void setPosition(int x, int y) {
+    public void setPozitie(int x, int y) {
         this.x = x;
         this.y = y;
     }

@@ -2,7 +2,7 @@ public class FactoryEntitateJoc {
     public static EntitateJoc creazaEntitate(char tip, int x, int y) {
         switch (tip) {
             case '#':
-                return new Perete(x,y); // Provide default positions
+                return new Perete(x,y);
             case 'C':
                 return new Cutie(x,y);
             case 'J':
